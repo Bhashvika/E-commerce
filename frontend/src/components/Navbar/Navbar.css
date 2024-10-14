@@ -1,0 +1,206 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&family=Grenze+Gotisch:wght@100..900&display=swap');
+
+/* Base Styles for Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: aliceblue;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    font-weight: 500;
+    font-family: "Grenze Gotisch", serif;
+    cursor: pointer;
+    color: rgb(122, 49, 125);
+}
+
+.link {
+    text-decoration: none;
+}
+
+.nav-left h1 {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+.nav-left h1 span {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    flex-grow: 1;
+}
+
+.search-container input[type="text"] {
+    padding-left: 40px;
+    height: 35px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.search-container .search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 20px;
+}
+
+.nav-right button {
+    width: 80px;
+    height: 30px;
+    font-size: 15px;
+    color: rgb(61, 58, 58);
+    border: 1px solid gray;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.contact-icon {
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+}
+
+.nav-cart-count {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 12px;
+    background-color: rgb(246, 27, 15);
+    color: aliceblue;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than or equal to 1280px */
+@media screen and (max-width: 1280px) {
+    .navbar {
+        padding: 15px;
+    }
+    .search-container {
+        max-width: 300px;
+    }
+}
+
+/* For screens smaller than or equal to 1024px */
+@media screen and (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+    .nav-left {
+        margin-bottom: 10px;
+    }
+    .nav-right {
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .search-container {
+        max-width: 250px;
+    }
+    .nav-cart-count {
+        font-size: 10px;
+        width: 18px;
+        height: 18px;
+        top: 120px; /* Adjust for smaller screens */
+        right: 380px; /* Adjust for smaller screens */
+    }
+}
+
+/* For screens smaller than or equal to 800px */
+@media screen and (max-width: 800px) {
+    .navbar {
+        padding: 10px;
+    }
+    .nav-left h1 {
+        font-size: 20px;
+    }
+    .nav-left {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .nav-right {
+        flex-direction: row;
+        gap: 10px;
+    }
+    .search-container {
+        max-width: 200px;
+    }
+    .nav-cart-count {
+        font-size: 10px;
+        width: 18px;
+        height: 18px;
+        top: 120px; /* Adjust for smaller screens */
+        right: 290px; /* Adjust for smaller screens */
+    }
+}
+
+/* For screens smaller than or equal to 500px */
+@media screen and (max-width: 500px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .nav-left {
+        text-align: center;
+    }
+    .nav-right {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .nav-right button {
+        width: 70px;
+        font-size: 14px;
+    }
+    .search-container {
+        max-width: 180px;
+        margin-bottom: 10px;
+    }
+    .search-container input[type="text"] {
+        font-size: 14px;
+        height: 30px;
+    }
+    .nav-cart-count {
+        font-size: 10px;
+        width: 18px;
+        height: 18px;
+        top:190px;
+        right:215px;
+    }
+}

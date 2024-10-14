@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Chokokutai&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chokokutai&family=Lugrasimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chokokutai&family=Kaushan+Script&family=Lugrasimo&family=Zen+Kaku+Gothic+New&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.contact {
+  position: relative;
+  min-height: auto; /* Changed to auto for better content fitting */
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("https://media.istockphoto.com/id/1311934969/photo/contact-us.jpg?b=1&s=612x612&w=0&k=20&c=gxvFaSo4attQ1jO45PET0SCOX7ZxpEknCACW9bEutgw=");
+  background-repeat: no-repeat;
+  background-size: cover; /* Adjusted for responsive background */
+  background-position: center;
+}
+
+.contact .content {
+  max-width: 1000px;
+  text-align: center;
+}
+
+.contact .content h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: whitesmoke;
+  font-style: oblique;
+}
+
+.contact .content p {
+  font-weight: 900;
+  color: whitesmoke;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  flex-wrap: wrap; /* Allow items to wrap for smaller screens */
+}
+
+.container .contactinfo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .contactinfo .box {
+  position: relative;
+  padding: 20px;
+  display: flex;
+}
+
+.container .contactinfo .icon {
+  min-width: 60px;
+  min-height: 60px;
+  background: #56a1f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+
+.container .contactinfo .text {
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  color: whitesmoke;
+  flex-direction: column;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.container .contactinfo .text h3 {
+  font-weight: 300;
+  color: #00bcd4;
+}
+
+.contactForm {
+  width: 30%;
+  padding: 20px;
+  background: #e9f1fc;
+  float: left;
+}
+
+.contactForm h2 {
+  font-size: 24px; /* Adjusted font size */
+  color: #333;
+  font-weight: 500;
+}
+
+.contactForm .inputBox {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+
+.contactForm .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+  color: #21047a;
+  font-size: 12px; /* Added px unit */
+  transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"] {
+  width: 100px;
+  background: #00bcd4;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+
+/* Responsive adjustments for specific breakpoints */
+
+/* For screens 1280px and below */
+@media (max-width: 1280px) {
+  .contact {
+    padding: 40px;
+  }
+
+  .contact .content h1 {
+    font-size: 36px;
+  }
+
+  .contact .content p {
+    font-size: 18px;
+  }
+
+  .container .contactinfo {
+    width: 100%;
+  }
+
+  .contactForm {
+    width: 40%;
+  }
+}
+
+/* For screens 1024px and below */
+@media (max-width: 1024px) {
+  .contact .content h1 {
+    font-size: 32px;
+  }
+
+  .contact .content p {
+    font-size: 16px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .container .contactinfo,
+  .contactForm {
+    width: 100%;
+  }
+
+  .contactForm {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+/* For screens 800px and below */
+@media (max-width: 800px) {
+  .contact .content h1 {
+    font-size: 28px;
+  }
+
+  .contact .content p {
+    font-size: 14px;
+  }
+
+  .container .contactinfo .box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contactForm {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+/* For screens 500px and below */
+@media (max-width: 500px) {
+  .contact .content h1 {
+    font-size: 24px;
+  }
+
+  .contact .content p {
+    font-size: 12px;
+  }
+
+  .contactForm h2 {
+    font-size: 20px;
+  }
+
+  .contactForm .inputBox input,
+  .contactForm .inputBox textarea {
+    font-size: 14px;
+  }
+
+  .contactForm {
+    width: 100%;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,68 @@
+.item {
+    width: 100%;
+    max-width: 300px; /* Limits the maximum width to 300px for larger screens */
+    margin: 0 auto; /* Centers the item on smaller screens */
+    transition: transform 0.6s ease; /* Smooth scaling effect */
+  }
+  
+  .item p {
+    margin: 6px 0px;
+    font-size: 16px; /* Responsive font size */
+  }
+  
+  .item-prices {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .item-new-price {
+    color: #374151;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .item-old-price {
+    color: #374151;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: line-through;
+  }
+  
+  .item:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .item {
+      width: 90%; /* Adjust width for tablet screens */
+      max-width: 250px; /* Further limit the max width for medium screens */
+    }
+  
+    .item p {
+      font-size: 14px; /* Adjust font size for medium screens */
+    }
+  
+    .item-new-price,
+    .item-old-price {
+      font-size: 16px; /* Adjust price font size for medium screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .item {
+      width: 100%; /* Full width for small screens */
+      max-width: none; /* Removes max width restriction for smaller screens */
+    }
+  
+    .item p {
+      font-size: 12px; /* Smaller font size for mobile screens */
+    }
+  
+    .item-new-price,
+    .item-old-price {
+      font-size: 14px; /* Smaller price font size for mobile screens */
+    }
+  }
+  

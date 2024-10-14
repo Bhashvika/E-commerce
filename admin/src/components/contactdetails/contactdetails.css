@@ -1,0 +1,42 @@
+.contactdetails {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(4, 1fr); /* 4 columns with equal width */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid container */
+  }
+  
+  .contact-format {
+    background-color: #f9f9f9; /* Light background for each box */
+    border: 1px solid #ddd; /* Light border around each box */
+    padding: 20px; /* Spacing inside each box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center align the text */
+  }
+  
+  .contact-format p {
+    margin: 5px 0; /* Space between paragraphs */
+    font-size: 16px; /* Font size */
+    color: #333; /* Text color */
+  }
+  
+  hr {
+    width: 60%;
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media screen and (max-width: 1024px) {
+    .contactdetails {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .contactdetails {
+      grid-template-columns: 1fr; /* 1 column for smaller screens */
+    }
+  }
+  
